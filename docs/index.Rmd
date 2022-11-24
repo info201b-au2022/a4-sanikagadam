@@ -1,7 +1,7 @@
 ---
-title: "Your A4 Report Title (TODO: Revise title)"
-author: "Your Name"
-date: '2022-11-01'
+title: "A4 Incarceration"
+author: "Sanika Gadam"
+date: '2022-11-21'
 output: html_document
 ---
 
@@ -11,9 +11,9 @@ source("../source/analysis.R")
 ```
 
 ## Abstract 
-[TODO: Include a short abstract (about 50 words)]
+Incarceration is very common around the United states. Many people are worried that this high rate of incarceration is racially motivated which is a huge issue our society is working to combat. In order to stay educated on this topic, it is important to analyze relevant data sets. 
 
-# Test (TODO: Remove before submission!!)
+
 ```{r echo=FALSE}
 q1_string <- test_query1()
 num <- 5
@@ -34,12 +34,21 @@ print(sum)
 ```
 
 ## Introduction 
-[TODO]
+The United states has the highest incarceration rate in the world. The reason this is such a big issue is due to the fact that it is racially motivated in certain parts of the world. In order to stay educated and educate others, we must analyze relevant data trends that could give us a clue as to whether the high rates of incarceration is racially motivated. We can look for specific patterns, for example the location, the frequency, the demographic, etc. Once we have these trends, we can compare them to national trends and see if gender and race have a play. 
 
 ## Data Summary 
-[TODO]
+This data set was collected by the Vera Institute of Justice in 2015. This data set is constantly updated due to new information and grants. The data was collected to show incarceration trends in America specifically regarding race and gender.There are 153,811 observations/rows and 121 variables/columns in the data. This data set is very large and therefore it may be hard to download on certain computers or it will have missing values in the data set. Also, there are NA values in the data set that we should be aware of. For both of these reasons, we should be careful when analyzing the data. I noticed that the total jail population in the United States has decreased in the last two years from 1435093 in 2019 to 	1199642 in 2020.  
 
-[TODO ... other sections ... See Canvas for details]
+#Section 3 summary 
+This data shows us the overall trend in the total jail population each year in the United States. Looking at this graph, you can see that the overall trend is an increase in the total jail population each year. We should take note of this and ask why the population seems to be growing and what reasons contribute. 
 
-_All the very best with your work!_
+#Section 4 summary
+This graph shows us the incarceration trends in CA and WA. You can see that the WA trend seems to jump up and down and there is not a clear pattern. However, the overall pattern seems to be a slight decrease in the jail population in the years 2000-2010. For CA, the trend in the early 2000s seemed to be constant and then there was a sharp increase starting 2010. 
+
+#Section 5 summary 
+This graph focuses on the number of women that are incarcerated each year. Studying this minority group can be helpful for noticing patterns in incarceration trends. We can use this data to see if the two are connected: being a woman and incarceration. There seems to be a positive percent change for most years. 
+
+#section 6 summary
+This map shows us areas of high incarceration rates. We can look at this map to see if certain areas have higher rates and why that may be the case. By looking at this map we can see that California has the highest jail population 
+
 
