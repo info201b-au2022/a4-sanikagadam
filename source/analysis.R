@@ -2,7 +2,7 @@ library(tidyverse)
 
 # The functions might be useful for A4
 source("../source/a4-helpers.R")
-
+read.csv("https://raw.githubusercontent.com/vera-institute/incarceration-trends/master/incarceration_trends.csv")
 fname <- "../data/incarceration_trends.csv"
 df <- read.csv(fname, nrows=-1)
 
@@ -33,13 +33,13 @@ test_query2 <- function(num=6) {
 #----------------------------------------------------------------------------#
 # This function tells is the population of people incarcerated each year 
 get_year_jail_pop <- function() {
-  year <- df %>%
+  year_group <- df %>%
     select(year, total_jail_pop) %>%
     drop_na() %>%
     group_by(year) %>%
     summarise(year, total_jail_pop)
-  year <- aggregate(total_jail_pop~.,year, FUN=sum)
-return(year)   
+  year <- aggregate(total_jail_pop~.,year_group, FUN = sum)
+  return(year_group)   
 }
 get_year_jail_pop()
 # This function plots the amount of people in jail each year 
@@ -49,7 +49,8 @@ plot_jail_pop_for_us <- function()  {
     geom_bar(stat='identity')
   return(total_pop)
 } 
-plot_jail_pop_for_us()
+plot1 <- plot_jail_pop_for_us()
+plot1
 ## Section 4  ---- 
 #----------------------------------------------------------------------------#
 # Growth of Prison Population by State 
@@ -75,8 +76,6 @@ plot_jail_pop_by_states <- function(states)  {
   return(line_graph)
 }
 plot_jail_pop_by_states(c("CA", "WA"))
-  
-
 
 
 ## Section 5  ---- 
@@ -109,6 +108,7 @@ percent_change_graph
 # Your functions might go here ... <todo:  update comment>
 # See Canvas
 #----------------------------------------------------------------------------#
+#This tells us the regions with higher incarceration rates
 data <- df %>% 
   group_by(state) %>% 
   summarize(total_jail_pop = sum(total_jail_pop, na.rm = TRUE))
